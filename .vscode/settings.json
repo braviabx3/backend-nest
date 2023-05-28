@@ -1,0 +1,8 @@
+{
+    "exportall.config.relExclusion": [
+        "/src/auth/dto"
+    ],
+    "exportall.config.folderListener": [
+        "/src/auth/dto"
+    ]
+}

@@ -1,0 +1,40 @@
+# version: '3'
+
+# services:
+#   db:
+#     container_name: mean-db
+#     image: mongo:5.0.16
+#     volumes:
+#       - ./mongo:/data/db
+#     ports:
+#       - 27017:27017
+#     restart: always
+    
+# version: '3'
+
+services:
+  db:
+    container_name: mean-db
+    image: mongo:5.0.16
+    volumes:
+      - ./mongo:/data/db
+    ports:
+      - 27017:27017
+    restart: always
+    environment:
+      - MONGO_URI=mongodb+srv://MEAN_USER:Matias2014@cluster0.oz0l9j6.mongodb.net/mean-db
+
+
+# version: '3'
+# services:
+#   db:
+#     container_name: mean-db
+#     image: firebase:latest
+#     volumes:
+#       - ./firebase:/firebase/db
+#     ports:
+#       - 8000:8000
+#     restart: always
+#     environment:
+#       - MONGO_URI=https://fir-img-fe824-default-rtdb.firebaseio.com
+#     command: serve --only functions,hosting
